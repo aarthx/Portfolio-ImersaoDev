@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+body {
+  background-image: radial-gradient(circle, #122c34, #0e3442, #0d3b51, #144261, #224870);
+  font-family: 'Kanit', sans-serif;
+}
+
+.container {
+  background: #F7F7F7;
+  margin: 64px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 6px #0E1D2F;
+  color: #1C1C1C;
+  padding: 64px;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perfil {
+  display: flex;
+}
+
+.perfil-foto {
+  border-radius: 460px;
+  max-height: 200px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.titulo {
+  margin-left: 16px;
+}
+
+.titulo h1 {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+@keyframes blink-caret-dark {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+.titulo h3 {
+  font-weight: 400;
+  font-size: 24px;
+  
+  /*animação de escrita*/
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto 30px auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.titulo img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.tema button {
+  align-self: flex-end;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 8px 16px;
+  background: #ECF4FF;
+  border-radius: 100px;
+  border: 2px solid #0E1D2F;
+}
+
+.tema button:hover {
+  background: #d3dbe6;
+  cursor: pointer;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
+  margin-top: 32px;
+  padding: 32px;
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  border-radius: 20px;
+}
+
+.projetos-titulo {
+  list-style: none;
+  font-weight: 700;
+  font-size: 36px; 
+}
+
+.projetos-item {
+  list-style-type: none;
+  font-size: 24px;
+  line-height: 48px;
+  font-weight: 400;
+}
+
+.projetos-item a {
+  color: #1C1C1C;
+  text-decoration: none;
+}
+
+.dark {
+  background: linear-gradient(236.85deg, #375B86 27.26%, #6B87A9 96.03%);
+}
+
+.dark .container {
+  background: #333439;
+  color: #F6F6F6;
+}
+
+.dark .projetos {
+  background-image: linear-gradient(to top, #264653, #225b68, #1c7079, #1b8786, #2a9d8f);
+  color: #1C1C1C;
+}
+
+.dark .tema button{
+  background: #1C1C1C;
+  color: #F6F6F6;
+  border: 2px solid #F7F7F7;
+}
+
+.dark .tema button:hover {
+  background: #3d3d3d;
+}
+
+.dark .titulo img {
+  filter: invert(1);
+}
+
+.dark .titulo h3 {
+  animation:  
+    typing 3.5s steps(40, end),
+    blink-caret-dark .75s step-end infinite;
+}
